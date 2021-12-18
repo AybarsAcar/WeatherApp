@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct WeatherApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      WeatherListScreen()
+        .environmentObject(Store()) // add store as an environment object to the application
     }
+  }
 }
